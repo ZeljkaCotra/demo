@@ -1,0 +1,6 @@
+<div class="btn-container">
+  <div class="col-sm-2 day-btn"  [ngClass]="{'day-btn-active': clicked == day.id}"  *ngFor="let day of days">
+    <div class="op-el" (click)="onClick($event)" id="{{day.id}}"></div>
+    <a href="" class="day-link">{{day.num}}<br>{{day.name}}</a>
+  </div>
+</div>

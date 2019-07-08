@@ -1,0 +1,34 @@
+<div class="home-screen">
+    <div class="activity">
+        <div class="op-el"></div>
+        <div class="activity-hdr">
+            <div class="circle crl1"></div>
+            <i class="material-icons color_white mi-act">timer</i>
+            <div class="act-p">
+                <p class="act-pt1">Activity</p>
+                <p class="act-pt">Average</p>
+            </div>
+        </div>
+        <div class="activity-amount">{{hours}}h {{minutes}}min</div>
+    </div>
+    <div class="steps">
+        <div class="op-el"></div>
+        <div class="steps-hdr">
+            <div class="circle crl2"></div>
+            <i class="material-icons color_white mi-stp">directions_run</i>
+            <p class="st-pt1">Steps</p>
+            <p class="st-pt">Total</p>
+        </div>
+        <div class="steps-amount">{{totalSteps | number}}</div>
+    </div>
+    <div class="calories">
+        <div class="op-el"></div>
+        <div class="calories-hdr">
+            <div class="circle crl3"></div>
+            <i class="material-icons color_white mi-cal">whatshot</i>
+            <p class="cal-pt1">Calories</p>
+            <p class="cal-pt">Total Burned</p>
+        </div>
+        <div class="calories-amount">{{burnedCalories |  number:'1.0-0'}}</div>
+    </div>
+</div>
