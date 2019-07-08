@@ -103,15 +103,33 @@ app-root {
   align-content: left;
 }
 
+.review-hdr-show {
+  @extend .review-hdr;
+  background-color: #00b6a3;
+  color: #ffffff;
+}
+
 .review-p1 {
   @include font-source-sans(34pt, #00b6a3, Bold);
   margin: 24pt 151pt 53pt 27pt;
+}
+
+.review-p1-show {
+  @include font-source-sans(34pt,  #ffffff, Bold);
+  margin: -86pt 151pt 53pt 27pt;
+
 }
 
 .review-p {
   @include size(188pt, 19pt, 74pt, 125pt, 45pt);
   @include font-source-sans(16pt, #898694, Medium);
   opacity: 1;
+}
+
+.review-p-show {
+  @include size(188pt, 19pt, 74pt, 125pt, 45pt);
+  @include font-source-sans(16pt, #ffffff, Medium);
+  opacity: 0.70;
 }
 
 .btn-container {

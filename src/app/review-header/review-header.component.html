@@ -1,4 +1,20 @@
-<div class='review-hdr'>
-    <strong><p class='review-p1'>Welcome!</p></strong>
-    <p class='review-p'>Overview of your activity</p>
+<ng-container *ngIf="day === 'Welcome!'; then first else second"></ng-container>
+
+<ng-template #first>
+  <div class='review-hdr'>
+    <strong>
+      <p class='review-p1'>{{day}}</p>
+    </strong>
+    <p class='review-p'>{{date}}</p>
   </div>
+</ng-template>
+
+<ng-template #second>
+  <div class='review-hdr-show'>
+    <div class="op-el"></div>
+    <strong>
+      <p class='review-p1-show'>{{day}}</p>
+    </strong>
+    <p class='review-p-show'>{{date}}</p>
+  </div>
+</ng-template>

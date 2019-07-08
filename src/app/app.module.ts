@@ -1,3 +1,4 @@
+import { SharedService } from './service/shared.service';
 import { AppErrorHandler } from './common/app-error-handler';
 import { HttpService } from './service/http.service';
 import { BrowserModule } from '@angular/platform-browser';
@@ -24,6 +25,7 @@ import { HttpModule } from '@angular/http';
   ],
   providers: [
     HttpService,
+    SharedService,
     { provide: ErrorHandler, useClass: AppErrorHandler }],
   bootstrap: [AppComponent]
 })

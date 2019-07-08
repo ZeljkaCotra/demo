@@ -7,4 +7,7 @@ export class Utility {
         return x.map(item => item.steps).reduce((prev, next) => prev + next);
     }
 
+    public static dayOfWeekAsString(dayIndex) : string {
+        return ["Monday","Tuesday","Wednesday","Thursday","Friday", "Saturday","Sunday"][dayIndex];
+      }
 }
