@@ -10,4 +10,9 @@ export class Utility {
     public static dayOfWeekAsString(dayIndex) : string {
         return ["Monday","Tuesday","Wednesday","Thursday","Friday", "Saturday","Sunday"][dayIndex];
       }
+
+      public static findDayInTimestamp (timestamp) : number {
+         let d = new Date(timestamp);
+         return d.getDate();
+      }
 }
