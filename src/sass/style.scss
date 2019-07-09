@@ -295,6 +295,13 @@ $pages: steps, calories, activity;
   @include md-icon-size(40pt, 59pt, 307pt);
 }
 
+.go-bck {
+  @include md-icon-size(40pt, 59pt, 307pt);
+  z-index: 10000;
+  background-color: transparent;
+  position: fixed;
+}
+
 .mi-cal {
   @include md-icon-size(27pt, 33pt, 287pt);
 }

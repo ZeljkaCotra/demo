@@ -27,4 +27,9 @@ export class ReviewHeaderComponent implements OnInit {
     );
   }
 
+  goBack(event) {
+    this.day = "Welcome!";
+    this.ss.goBack(false);
+  }
+
 }

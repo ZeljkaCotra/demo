@@ -11,7 +11,7 @@
 
 <ng-template #second>
   <div class='review-hdr-show'>
-      <i class="material-icons color_white left-chv">chevron_left</i>
+    <div class="go-bck" (click)="goBack($event)"> <i class="material-icons color_white left-chv">chevron_left</i></div>
     <div class="op-el"></div>
     <strong>
       <p class='review-p1-show'>{{day}}</p>

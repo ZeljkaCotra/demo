@@ -36,6 +36,14 @@ export class HomeScreenContentComponent implements OnInit {
 
     this.ss.getEmittedValue().subscribe(
       (d) => {
+        if (!d) {
+          this.isButtonClicked = false;
+          this.totalSteps = Utility.totalSteps(this.data);
+          this.burnedCalories = this.totalSteps * 0.05;
+          this.minutes = Math.round((this.totalSteps * 0.5 / 60) % 60);
+          this.hours = Math.floor(this.totalSteps * 0.5 / 3600);
+          return;
+        }
         this.totalSteps = 0;
         this.isButtonClicked = true;
         let self = this;

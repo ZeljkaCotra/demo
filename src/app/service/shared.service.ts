@@ -19,4 +19,9 @@ export class SharedService {
      return this.fire;
    }
 
+   goBack(d : boolean) {
+     console.log('go back');
+    this.fire.emit(d);
+   }
+
 } 
