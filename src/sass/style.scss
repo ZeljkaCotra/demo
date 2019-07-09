@@ -60,20 +60,29 @@
   font-size: $size !important;
   height: $size;
   width: $size;
-  top:$top;
+  top: $top;
   right: $right;
   position: fixed;
 }
 
-@mixin font-source-sans($size: false, $colour: false, $weight: false,  $lh: false, $letter-spacing: false) {
-  font-family: 'Source Sans Pro', Helvetica, Neue;
-  @if $size { font-size: $size; }
-  @if $colour { color: $colour; }
-  @if $weight { font-weight: $weight; }
-  @if $lh { line-height: $lh; }
-  @if $letter-spacing {letter-spacing : $letter-spacing}
+@mixin font-source-sans($size: false, $colour: false, $weight: false, $lh: false, $letter-spacing: false) {
+  font-family: "Source Sans Pro", Helvetica, Neue;
+  @if $size {
+    font-size: $size;
+  }
+  @if $colour {
+    color: $colour;
+  }
+  @if $weight {
+    font-weight: $weight;
+  }
+  @if $lh {
+    line-height: $lh;
+  }
+  @if $letter-spacing {
+    letter-spacing: $letter-spacing;
+  }
 }
-
 
 html {
   background: #ffffff;
@@ -121,9 +130,8 @@ app-root {
 }
 
 .review-p1-show {
-  @include font-source-sans(34pt,  #ffffff, Bold);
-  margin: -86pt 151pt 53pt 27pt;
-
+  @include font-source-sans(34pt, #ffffff, Bold);
+  margin: -86pt 151pt 53pt 60pt;
 }
 
 .review-p {
@@ -133,9 +141,9 @@ app-root {
 }
 
 .review-p-show {
-  @include size(188pt, 19pt, 74pt, 125pt, 45pt);
+  @include size(188pt, 19pt, 74pt, 125pt, pt);
   @include font-source-sans(16pt, #ffffff, Medium);
-  opacity: 0.70;
+  opacity: 0.7;
 }
 
 .btn-container {
@@ -157,7 +165,7 @@ app-root {
 .day-btn-active {
   @include border-radius(23pt);
   @include font-source-sans(16pt, #00b6a3, Medium);
-  background-color:  #ffffff;
+  background-color: #ffffff;
   margin: 0 10pt 0 0;
   width: 60pt;
   height: 60pt;
@@ -213,6 +221,11 @@ $pages: steps, calories, activity;
   margin: 564pt auto;
 }
 
+.steps-tot-day {
+  @include size(340pt, 555pt, 257pt, 17pt, 18pt);
+  background-color: #ffffff;
+}
+
 .calories-amount,
 .steps-amount,
 .activity-amount {
@@ -260,37 +273,86 @@ $pages: steps, calories, activity;
   @include size(40.98pt, 40.98pt, 25pt, 279.02pt, 20pt);
 }
 
-.mi-act {@include md-icon-size(27pt, 31.83pt, 285.83pt);}
+.crl4 {
+  @include size(40.98pt, 40.98pt, 325pt, 167.02pt, 167pt);
+  background-color: #00b6a3;
+}
 
-.mi-stp {@include md-icon-size(27pt, 33pt, 287pt);}
+.mi-act {
+  @include md-icon-size(27pt, 31.83pt, 285.83pt);
+}
 
-.mi-cal {@include md-icon-size(27pt, 33pt, 287pt);}
+.mi-stp {
+  @include md-icon-size(27pt, 33pt, 287pt);
+}
 
-.activity-amount{ @include size(170pt, 46pt, 94pt, 111pt, 76pt); }
+.mi-stp2 {
+  @include md-icon-size(27pt, 333pt, 173pt);
+  z-index: 1000;
+}
 
-.steps-amount{@include size(99pt, 45pt, 24pt, 30pt, 211pt); }
+.left-chv {
+  @include md-icon-size(40pt, 59pt, 307pt);
+}
 
-.calories-amount{@include size(65pt, 45pt, 24pt, 30pt, 263pt); }
+.mi-cal {
+  @include md-icon-size(27pt, 33pt, 287pt);
+}
 
-.act-pt1{@include size(72pt, 24pt, 22pt, 192pt, 76pt); }
+.activity-amount {
+  @include size(170pt, 46pt, 94pt, 111pt, 76pt);
+}
 
-.st-pt1{@include size(55pt, 24pt, 22pt, 209pt, 76pt); }
+.steps-amount {
+  @include size(99pt, 45pt, 24pt, 30pt, 211pt);
+}
 
-.cal-pt1{@include size(79pt, 24pt, 22pt, 185pt, 76pt); }
+.calories-amount {
+  @include size(65pt, 45pt, 24pt, 30pt, 263pt);
+}
 
-.act-pt{@include size(62pt, 19pt, 49pt, 202pt, 76pt); }
+.act-pt1 {
+  @include size(72pt, 24pt, 22pt, 192pt, 76pt);
+}
 
-.st-pt{@include size(36pt, 19pt, 49pt, 228pt, 76pt); }
+.st-pt1 {
+  @include size(55pt, 24pt, 22pt, 209pt, 76pt);
+}
 
-.cal-pt{@include size(97pt, 19pt, 49pt, 167pt, 76pt); }
+.st-pt1-day {
+  @include size(54pt, 23pt, 372pt, 160pt, 161pt);
+  @include font-source-sans(20pt, #151c1f, Regular);
+}
 
-.tbl{
+.cal-pt1 {
+  @include size(79pt, 24pt, 22pt, 185pt, 76pt);
+}
+
+.act-pt {
+  @include size(62pt, 19pt, 49pt, 202pt, 76pt);
+}
+
+.st-pt {
+  @include size(36pt, 19pt, 49pt, 228pt, 76pt);
+}
+
+.st-pt-day {
+  @include size(124pt, 57pt, 399pt, 125pt, 125pt);
+  @include font-source-sans(48pt, #151c1f, Bold);
+}
+
+.cal-pt {
+  @include size(97pt, 19pt, 49pt, 167pt, 76pt);
+}
+
+.tbl {
   @include size(307pt, 21pt, 735pt, 0pt, 33pt);
   border-collapse: collapse;
 }
 
-table td, table th {
-  border-right: 1pt solid #EBEBEB;
+table td,
+table th {
+  border-right: 1pt solid #ebebeb;
 }
 
 .tr {
@@ -299,7 +361,7 @@ table td, table th {
 }
 
 th {
-  @include font-source-sans(18pt, #B3B3B3);
+  @include font-source-sans(18pt, #b3b3b3);
 }
 
 td {
